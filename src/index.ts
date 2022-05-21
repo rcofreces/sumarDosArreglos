@@ -1,27 +1,20 @@
 let arreglo1: number[] = new Array(6);
 let arreglo2: number[] = new Array(6);
-let indice1: number;
-let indice2: number;
+let indice1, indice2: number;
 
 for (indice1 = 0; indice1 < 6; indice1++) {
   arreglo1[indice1] = Number(
     prompt(`Ingrese el número del arreglo 1 en la posición ${indice1}`)
   );
-}
-
-for (indice2 = 0; indice2 < 6; indice2++) {
-  arreglo2[indice2] = Number(
-    prompt(`Ingrese el número del arreglo 2 en la posición ${indice1}`)
-  );
-}
-
-for (indice1 = 0; indice1 < 6; indice1++) {
   console.log(
     `El número ingresado en la posición ${indice1} del arreglo 1 es: ${arreglo1[indice1]}`
   );
 }
 
 for (indice2 = 0; indice2 < 6; indice2++) {
+  arreglo2[indice2] = Number(
+    prompt(`Ingrese el número del arreglo 2 en la posición ${indice2}`)
+  );
   console.log(
     `El número ingresado en la posición ${indice2} del arreglo 2 es: ${arreglo2[indice2]}`
   );
@@ -52,3 +45,13 @@ console.log(
 console.log(
   `El resultado de la suma de la sexta posición de los arreglos 1 y 2 es: ${resultado5}`
 );
+
+function sumarArreglos(arregloA: number[], arregloB: number[]): number[] {
+  let resultado: number[] = [];
+  for (let i = 0; i < arregloA.length; i++) {
+    resultado[i] = arregloA[i] + arregloB[i];
+  }
+  return resultado;
+}
+
+console.log("La suma de los arreglos es:", sumarArreglos(arreglo1, arreglo2);
